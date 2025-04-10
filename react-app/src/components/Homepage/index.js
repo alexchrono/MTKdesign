@@ -27,15 +27,15 @@ function Homepage() {
 
     }
 
-    useEffect(() => {
-        if (toggleDetailsMobile){
-            showDetails(toggleDetailsMobile)
-        }
-        else {restoreNormal()}
+    // useEffect(() => {
+    //     if (toggleDetailsMobile){
+    //         showDetails(toggleDetailsMobile)
+    //     }
+    //     else {restoreNormal()}
 
 
 
-    }, [toggleDetailsMobile]);
+    // }, [toggleDetailsMobile]);
 
 
     useEffect(() => {
