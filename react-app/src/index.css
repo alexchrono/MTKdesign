@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+#root {
+    height: 100dvh;
+    width: 100dvw;
+    overflow-y: hidden;
+    border: 6px solid red;
+  }
+
+  .buttonMaster {
+    position: absolute;
+    color: white;
+    font-size: 3.5vw;
+    font-weight: bolder;
+    left: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+  }
+  .realButtonz {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /* relative flex justify-center items-center w-full h-full cursor-pointer */
+  }
