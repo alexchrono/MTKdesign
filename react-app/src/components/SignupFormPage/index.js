@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { signUp } from "../../store/session";
 import './SignupForm.css';
 
 function SignupFormPage() {
@@ -17,14 +16,15 @@ function SignupFormPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password === confirmPassword) {
-        const data = await dispatch(signUp(username, email, password));
-        if (data) {
-          setErrors(data)
-        }
-    } else {
-        setErrors(['Confirm Password field must be the same as the Password field']);
-    }
+    // if (password === confirmPassword) {
+    //     const data = await dispatch(signUp(username, email, password));
+    //     if (data) {
+    //       setErrors(data)
+    //     }
+    // } else {
+    //     setErrors(['Confirm Password field must be the same as the Password field']);
+    // }
+    return 7
   };
 
   return (

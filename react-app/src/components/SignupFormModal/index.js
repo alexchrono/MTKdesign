@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
-import { signUp } from "../../store/session";
 import "./SignupForm.css";
 
 function SignupFormModal() {
@@ -15,18 +14,19 @@ function SignupFormModal() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		if (password === confirmPassword) {
-			const data = await dispatch(signUp(username, email, password));
-			if (data) {
-				setErrors(data);
-			} else {
-				closeModal();
-			}
-		} else {
-			setErrors([
-				"Confirm Password field must be the same as the Password field",
-			]);
-		}
+		return 7
+		// if (password === confirmPassword) {
+		// 	const data = await dispatch(signUp(username, email, password));
+		// 	if (data) {
+		// 		setErrors(data);
+		// 	} else {
+		// 		closeModal();
+		// 	}
+		// } else {
+		// 	setErrors([
+		// 		"Confirm Password field must be the same as the Password field",
+		// 	]);
+		// }
 	};
 
 	return (

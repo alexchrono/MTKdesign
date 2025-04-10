@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { login } from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
 import GoogleAuthButton from '../GoogleAuthButton'
 import DOMPurify from 'dompurify';
 import { MakeButton } from "../utils";
-import { ThunkGetJobs } from "../../store/jobs";
+// import { ThunkGetJobs } from "../../store/jobs";
 // import "./LoginForm.css";
 import './homepage.css'
 import {showDetails} from './mobileScript';
@@ -38,14 +37,7 @@ function Homepage() {
     // }, [toggleDetailsMobile]);
 
 
-    useEffect(() => {
 
-        const fetchData = async () => {
-            await dispatch(ThunkGetJobs());
-
-        };
-        fetchData();
-    }, [dispatch]);
 
     console.log('JOBS ISSSSSS', jobs)
 

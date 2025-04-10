@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { login } from "../../store/session";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
 import GoogleAuthButton from '../GoogleAuthButton'
@@ -14,13 +13,14 @@ function LoginFormModal() {
   const [waiting,setWaiting]=useState(false)
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = await dispatch(login(email, password));
-    if (data) {
-      setErrors(data);
-    } else {
-        closeModal()
-    }
+    // e.preventDefault();
+    // const data = await dispatch(login(email, password));
+    // if (data) {
+    //   setErrors(data);
+    // } else {
+    //     closeModal()
+    // }
+    return 7
   };
 
 

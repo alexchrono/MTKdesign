@@ -3,20 +3,17 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
-import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import Homepage from './components/Homepage'
 import './index.css'
 
 function App() {
   const dispatch = useDispatch();
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    dispatch(authenticate()).then(() => setIsLoaded(true));
-  }, [dispatch]);
+  const [isLoaded, setIsLoaded] = useState(true);
 
 
-  
+
+
   return (
     <>
       <Navigation isLoaded={isLoaded} />

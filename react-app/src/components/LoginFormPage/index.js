@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { login } from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import './LoginForm.css';
@@ -15,10 +14,11 @@ function LoginFormPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await dispatch(login(email, password));
-    if (data) {
-      setErrors(data);
-    }
+    // const data = await dispatch(login(email, password));
+    // if (data) {
+    //   setErrors(data);
+    // }
+    return 7
   };
 
   return (
