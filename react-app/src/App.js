@@ -4,13 +4,14 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import Navigation from "./components/Navigation";
 import Homepage from './components/Homepage';
+import { ModalProvider, Modal } from "./context/Modal";
 import './output.css';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(true);
 
   return (
-    <div className="bg-blue-500 text-white">
+    <ModalProvider>
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Routes>
@@ -19,7 +20,8 @@ function App() {
           <Route path="/signup" element={<SignupFormPage />} />
         </Routes>
       )}
-   </div>
+      <Modal />
+    </ModalProvider>
   );
 }
 
