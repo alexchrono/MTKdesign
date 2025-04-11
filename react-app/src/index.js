@@ -7,7 +7,7 @@ import { ModalProvider, Modal } from "./context/Modal";
 // import configureStore from "./store";
 import App from "./App";
 
-import "./index.css";
+import "./output.css";
 
 // if (process.env.NODE_ENV !== "production") {
 // 	window.store = store;

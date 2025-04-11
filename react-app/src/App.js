@@ -4,7 +4,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import Navigation from "./components/Navigation";
 import Homepage from './components/Homepage';
-import './index.css';
+import './output.css';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(true);
