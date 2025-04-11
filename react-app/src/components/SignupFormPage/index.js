@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import './SignupForm.css';
 
 function SignupFormPage() {
-  const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +10,6 @@ function SignupFormPage() {
   const [errors, setErrors] = useState([]);
 
   // Redirect to homepage if there's a session user
-  if (sessionUser) return <Navigate to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Changed import to react-dom/client
-import { Provider } from "react-redux";
+
 import { BrowserRouter } from "react-router-dom";
 
 import { ModalProvider, Modal } from "./context/Modal";
@@ -20,12 +20,10 @@ import "./index.css";
 function Root() {
 	return (
 		<ModalProvider>
-			<Provider>
-				<BrowserRouter>
-					<App />
-					<Modal />
-				</BrowserRouter>
-			</Provider>
+			<BrowserRouter>
+				<App />
+				<Modal />
+			</BrowserRouter>
 		</ModalProvider>
 	);
 }

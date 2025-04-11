@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
 import "./SignupForm.css";
 
 function SignupFormModal() {
-	const dispatch = useDispatch();
 	const [email, setEmail] = useState("");
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");

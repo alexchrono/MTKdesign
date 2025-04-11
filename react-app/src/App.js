@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
@@ -8,7 +7,6 @@ import Homepage from './components/Homepage';
 import './index.css';
 
 function App() {
-  const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(true);
 
   return (
