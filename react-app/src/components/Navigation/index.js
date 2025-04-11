@@ -4,11 +4,14 @@ import ProfileButton from './ProfileButton';
 import Logo from '../../assets/MTKdesignPaletteSilver.png';
 import GradientButton from '../GradientButton';
 import GradientComparison from '../GradientComparison';
+import { useAppContext } from '../../context/AppContext';
+
 
 
 
 
 function Navigation({ isLoaded }){
+	const { buttonSelection, setButtonSelection } = useAppContext();
 
 	return (
 		<>
@@ -37,23 +40,34 @@ function Navigation({ isLoaded }){
 
 		<div id='buttonsContainer'>
 		<div id='buttonsContainer2'>
-		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
-          About Us
-        </GradientButton>
+      <GradientButton
+        selected={buttonSelection === 'About Us'}
+        onClick={() => setButtonSelection('About Us')}
+      >
+        About Us
+      </GradientButton>
 
-		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
-          Previous Work
-        </GradientButton>
+      <GradientButton
+        selected={buttonSelection === 'Previous Work'}
+        onClick={() => setButtonSelection('Previous Work')}
+      >
+        Previous Work
+      </GradientButton>
 
-		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
-          Owner
-        </GradientButton>
+      <GradientButton
+        selected={buttonSelection === 'Owner'}
+        onClick={() => setButtonSelection('Owner')}
+      >
+        Owner
+      </GradientButton>
 
-		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
-          Contact Us
-        </GradientButton>
-
-				</div>
+      <GradientButton
+        selected={buttonSelection === 'Contact Us'}
+        onClick={() => setButtonSelection('Contact Us')}
+      >
+        Contact Us
+      </GradientButton>
+    </div>
 
 		</div>
 

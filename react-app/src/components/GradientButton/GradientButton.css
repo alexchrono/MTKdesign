@@ -54,3 +54,13 @@
     background-image: linear-gradient(144deg, rgb(140, 28, 19), rgb(128, 51, 88) 8%, rgb(137, 56, 153) 35%, rgb(94, 62, 136) 44%, rgb(106, 61, 167) 55%, rgb(58, 140, 159) 66%, rgb(23, 126, 137) 86%);
     transform: scale(0.9);
 }
+
+.uiverse-gradient-button--selected {
+    /* background-image: linear-gradient(144deg, #8c1c13, #9d2aa8 50%, #177e89); */
+    background-image: linear-gradient(144deg, rgb(140, 28, 19), rgb(128, 51, 88) 8%, rgb(137, 56, 153) 35%, rgb(94, 62, 136) 44%, rgb(106, 61, 167) 55%, rgb(58, 140, 159) 66%, rgb(23, 126, 137) 86%);
+    /* transform: scale(0.9); */
+}
+
+.uiverse-gradient-button--selected .uiverse-button-inner {
+    background: none;
+}
