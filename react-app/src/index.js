@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client"; // Changed import to react-dom/client
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
@@ -8,8 +8,6 @@ import { ModalProvider, Modal } from "./context/Modal";
 import App from "./App";
 
 import "./index.css";
-
-
 
 // if (process.env.NODE_ENV !== "production") {
 // 	window.store = store;
@@ -32,9 +30,10 @@ function Root() {
 	);
 }
 
-ReactDOM.render(
+// Use createRoot to render the app in React 18
+const root = ReactDOM.createRoot(document.getElementById("root")); // Use createRoot instead of render
+root.render(
 	<React.StrictMode>
 		<Root />
-	</React.StrictMode>,
-	document.getElementById("root")
+	</React.StrictMode>
 );

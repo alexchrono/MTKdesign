@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import './SignupForm.css';
 
 function SignupFormPage() {
@@ -12,7 +12,8 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
+  // Redirect to homepage if there's a session user
+  if (sessionUser) return <Navigate to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ function SignupFormPage() {
     // } else {
     //     setErrors(['Confirm Password field must be the same as the Password field']);
     // }
-    return 7
+    return 7;
   };
 
   return (

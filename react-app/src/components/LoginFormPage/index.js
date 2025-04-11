@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -10,7 +10,8 @@ function LoginFormPage() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
+  // Redirect to homepage if there's a session user
+  if (sessionUser) return <Navigate to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ function LoginFormPage() {
     // if (data) {
     //   setErrors(data);
     // }
-    return 7
+    return 7;
   };
 
   return (
