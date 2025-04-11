@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ProfileButton from './ProfileButton';
 import Logo from '../../assets/MTKdesignPaletteSilver.png';
+import GradientButton from '../GradientButton';
 
 
 
@@ -34,7 +35,10 @@ function Navigation({ isLoaded }){
 		</div>
 
 		<div id='buttonsContainer'>
-			
+		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
+          Let’s Go
+        </GradientButton>
+
 		</div>
 
 
