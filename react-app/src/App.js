@@ -12,7 +12,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(true);
 
   return (
-    <>
+    <div className="bg-blue-500 text-white">
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="/signup" element={<SignupFormPage />} />
         </Routes>
       )}
-    </>
+   </div>
   );
 }
 
