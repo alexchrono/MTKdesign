@@ -7,6 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -160,6 +163,12 @@
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
+  .block {
+    display: block;
+  }
   .contents {
     display: contents;
   }
@@ -181,8 +190,21 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .object-contain {
     object-fit: contain;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
@@ -227,7 +249,6 @@
 }
 #blockSpacer {
   box-sizing: border-box;
-  border: 3px solid green;
   width: 92%;
   height: 100%;
   display: flex;
@@ -254,7 +275,6 @@
 }
 #homeWrapper {
   box-sizing: border-box;
-  border: 4px solid blue;
   width: 100%;
   height: 80%;
   overflow-y: hidden;
@@ -264,7 +284,6 @@
 }
 #buttonsContainer {
   box-sizing: border-box;
-  border: 2px dotted yellow;
   width: 100%;
   height: 6%;
   display: flex;
@@ -272,50 +291,22 @@
   justify-content: space-between;
   background: linear-gradient(to bottom, var(--banner) 0%, var(--siteBg) 100%);
 }
-button {
-  border: none;
-  display: block;
-  position: relative;
-  padding: 0.7em 2.4em;
-  font-size: 18px;
-  background: transparent;
-  cursor: pointer;
-  user-select: none;
-  overflow: hidden;
-  color: royalblue;
-  z-index: 1;
-  font-family: inherit;
-  font-weight: 500;
-}
-button span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: -1;
-  border: 4px solid royalblue;
-}
 button span::before {
   content: "";
   display: block;
   position: absolute;
   width: 8%;
   height: 500%;
-  background: transparent;
+  background: gray;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-60deg);
-  transition: all 0.3s;
+  z-index: -1;
 }
 button:hover span::before {
   transform: translate(-50%, -50%) rotate(-90deg);
   width: 100%;
   background: royalblue;
-}
-button:hover {
-  color: white;
 }
 button:active span::before {
   background: #2751cd;
@@ -345,6 +336,15 @@ button:active span::before {
   inherits: false;
   initial-value: skewY(0);
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -353,6 +353,8 @@ button:active span::before {
       --tw-rotate-z: rotateZ(0);
       --tw-skew-x: skewX(0);
       --tw-skew-y: skewY(0);
+      --tw-border-style: solid;
+      --tw-ease: initial;
     }
   }
 }

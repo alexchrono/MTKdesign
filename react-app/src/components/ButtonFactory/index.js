@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
+import screenshotGradient from '../../assets/screenshotGradient.png'
 
-const createButtonStyles = ( ) => {
-    let bgColor = 'linear-gradient(to bottom, #7469B6 0%, #E1AFD1 100%)';
-    let borderColor = 'royalblue'
 
+const createButtonStyles = (bgColor, borderColor) => {
   return {
     button: {
       position: 'relative',
@@ -36,7 +35,9 @@ const createButtonStyles = ( ) => {
       position: 'absolute',
       width: '8%',
       height: '500%',
-      background: bgColor,
+      backgroundImage: `url(${screenshotGradient})`, // Set the screenshot as background image
+      backgroundSize: 'cover',  // Make it cover the whole area
+      backgroundPosition: 'center',  // Center the image (you can adjust this)
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%) rotate(-60deg)',
@@ -47,10 +48,9 @@ const createButtonStyles = ( ) => {
     hoverSlash: {
       transform: 'translate(-50%, -50%) rotate(-90deg)',
       width: '100%',
-      background: borderColor,
     },
     activeSlash: {
-      background: '#2751cd',
+      background: '#2751cd', // You can adjust this if you want to change the color when active
     },
   };
 };
@@ -89,8 +89,6 @@ const ButtonFactory = ({ bgColor, borderColor, children = 'Button' }) => {
       <span style={styles.backgroundWrapper}>
         <span ref={slashRef} style={styles.slash} />
       </span>
-
-      {/* Direct text without span */}
       {children}
     </button>
   );
