@@ -103,3 +103,27 @@
   justify-content:space-between;
   background: linear-gradient(to bottom, var(--banner) 0%, var(--siteBg) 100%);
 }
+
+/* From Uiverse.io by adamgiebl */
+button span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: gray;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  z-index: -1;
+}
+
+button:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: royalblue;
+}
+
+button:active span::before {
+  background: #2751cd;
+}
