@@ -16,6 +16,13 @@
 
   }
 
+  #MTKlogo {
+
+    height:79%;
+    width:auto;
+    object-fit:contain;
+  }
+
   .courgette-regular {
     font-family: 'Courgette', cursive;
     font-weight: 400;
@@ -55,7 +62,7 @@
 
   #centerLogo {
     box-sizing: border-box;
-    border:3px solid red;
+    /* border:3px solid red; */
     width: 17%;
     height:100%;
     display:flex;

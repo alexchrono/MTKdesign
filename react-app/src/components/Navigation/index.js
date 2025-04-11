@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ProfileButton from './ProfileButton';
+import Logo from '../../assets/MTKdesignPaletteSilver.png';
+
+
 
 
 function Navigation({ isLoaded }){
@@ -14,7 +17,8 @@ function Navigation({ isLoaded }){
 				<div id='blockSpacer'>
 
 					<div id='centerLogo'>
-							
+					<img src={Logo} alt="MTK Design Logo" id='MTKlogo' />
+
 					</div>
 
 				</div>
