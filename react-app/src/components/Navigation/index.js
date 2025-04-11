@@ -9,6 +9,7 @@ import Logo from '../../assets/MTKdesignPaletteSilver.png';
 function Navigation({ isLoaded }){
 
 	return (
+		<>
 		<div id='Navigation'>
 
 			<div id='leftHome'>
@@ -31,6 +32,14 @@ function Navigation({ isLoaded }){
 			)} */}
 
 		</div>
+
+		<div id='buttonsContainer'>
+			
+		</div>
+
+
+
+		</>
 	);
 }
 
