@@ -7,8 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-white: #fff;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -183,39 +181,80 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
-  }
   .object-contain {
     object-fit: contain;
   }
-  .text-white {
-    color: var(--color-white);
-  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+:root {
+  --banner: #7469B6;
+  --color2: #AD88C6;
+  --siteBg: #E1AFD1;
+  --logoText: #FFE6E6;
 }
 #root {
   height: 100dvh;
   width: 100dvw;
   overflow-y: hidden;
 }
-.buttonMaster {
-  position: absolute;
-  color: white;
-  font-size: 3.5vw;
-  font-weight: bolder;
-  left: 20%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.courgette-regular {
+  font-family: 'Courgette', cursive;
+  font-weight: 400;
+  font-style: normal;
 }
-.realButtonz {
-  position: relative;
+#onlyVisibleMobile {
+  display: none;
+}
+.profile-dropdown {
+  position: absolute;
+}
+.hidden {
+  display: none;
+}
+#leftHome {
+  box-sizing: border-box;
+  border: 2px dotted black;
+  width: 8%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+}
+#blockSpacer {
+  box-sizing: border-box;
+  border: 3px solid green;
+  width: 92%;
   height: 100%;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding-right: 8%;
+}
+#centerLogo {
+  box-sizing: border-box;
+  border: 3px solid red;
+  width: 17%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4dvh;
+  color: var(--logoText);
+}
+#Navigation {
+  box-sizing: border-box;
+  width: 100%;
+  height: 13%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--banner);
+}
+#homeWrapper {
+  box-sizing: border-box;
+  border: 4px solid blue;
+  width: 100%;
+  height: 87%;
+  overflow-y: hidden;
+  background-color: var(--siteBg);
 }
 @property --tw-rotate-x {
   syntax: "*";

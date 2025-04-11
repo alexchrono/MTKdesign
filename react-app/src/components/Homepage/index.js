@@ -5,7 +5,7 @@ import React from "react";
 // import { MakeButton } from "../utils";
 // import { ThunkGetJobs } from "../../store/jobs";
 // import "./LoginForm.css";
-import './homepage.css'
+// import './homepage.css'
 // import { showDetails } from './mobileScript';
 
 function Homepage() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ProfileButton from './ProfileButton';
-import './Navigation.css';
+
 
 function Navigation({ isLoaded }){
 
@@ -13,14 +13,18 @@ function Navigation({ isLoaded }){
 				</div>
 				<div id='blockSpacer'>
 
+					<div id='centerLogo'>
+							
+					</div>
+
 				</div>
 
 
-			{isLoaded && (
+			{/* {isLoaded && (
 				<div id='navHolder'>
 <ProfileButton user={{ name: "me", status: "I'm cool" }} />
 </div>
-			)}
+			)} */}
 
 		</div>
 	);

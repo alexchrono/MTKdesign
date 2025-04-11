@@ -1,34 +1,85 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 
-
+:root {
+  --banner: #7469B6;
+  --color2: #AD88C6;
+  --siteBg: #E1AFD1;
+  --logoText: #FFE6E6;
+}
 
 #root {
     height: 100dvh;
     width: 100dvw;
     overflow-y: hidden;
-    
+
   }
 
-  .buttonMaster {
+  .courgette-regular {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #onlyVisibleMobile {
+    display: none;
+  }
+  .profile-dropdown {
     position: absolute;
-    color: white;
-    font-size: 3.5vw;
-    font-weight: bolder;
-    left: 20%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-
   }
-  .realButtonz {
-    position: relative;
-    display: flex;
+
+  .hidden {
+    display: none;
+  }
+
+  #leftHome {
+    box-sizing: border-box;
+    border:2px dotted black;
+    width:8%;
+    height:100%;
+    display:flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    /* relative flex justify-center items-center w-full h-full cursor-pointer */
   }
+
+  #blockSpacer {
+    box-sizing: border-box;
+    border:3px solid green;
+    width: 92%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    padding-right:8%;
+  }
+
+  #centerLogo {
+    box-sizing: border-box;
+    border:3px solid red;
+    width: 17%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:4dvh;
+    color:var(--logoText);
+  }
+
+  #Navigation {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--banner);
+  }
+
+  #homeWrapper {
+    box-sizing: border-box;
+    border: 4px solid blue;
+    width: 100%;
+    height: 87%;
+    overflow-y: hidden;
+    background-color: var(--siteBg);
+}
