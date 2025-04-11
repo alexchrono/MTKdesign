@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 
-const createButtonStyles = (bgColor = 'gray', borderColor = 'royalblue') => {
+const createButtonStyles = ( ) => {
+    let bgColor = 'linear-gradient(to bottom, #7469B6 0%, #E1AFD1 100%)';
+    let borderColor = 'royalblue'
+
   return {
     button: {
       position: 'relative',
