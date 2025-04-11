@@ -7,6 +7,7 @@ export function AppProvider({ children }) {
 
 
     const [showHolder, setShowHolder] = useState(false);
+    const [buttonSelection,setButtonSelection] = useState('About Us')
 
 
 
@@ -15,6 +16,8 @@ export function AppProvider({ children }) {
             value={{
                 showHolder,
                 setShowHolder,
+                buttonSelection,
+                setButtonSelection
             }}
         >
             {children}

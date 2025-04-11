@@ -31,7 +31,7 @@ const GradientComparison = () => {
       <button
   style={{
     ...buttonBase,
-    backgroundImage: 'linear-gradient(144deg, rgb(140, 28, 19), rgb(128, 51, 88) 22%, rgb(94, 62, 136) 44%, rgb(57, 83, 198) 58%, rgb(58, 140, 159) 66%, rgb(23, 126, 137) 77%)',
+    backgroundImage: 'linear-gradient(144deg, rgb(140, 28, 19), rgb(128, 51, 88) 8%, rgb(137, 56, 153) 35%, rgb(94, 62, 136) 44%, rgb(106, 61, 167) 55%, rgb(58, 140, 159) 66%, rgb(23, 126, 137) 86%)',
 }}
 >
   Button Text

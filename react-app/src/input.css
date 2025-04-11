@@ -86,7 +86,7 @@
     box-sizing: border-box;
     border: 4px solid blue;
     width: 100%;
-    height: 80%;
+    height: 78%;
     overflow-y: hidden;
     background-color: var(--siteBg);
     display:flex;
@@ -97,9 +97,20 @@
   box-sizing: border-box;
   border:2px dotted yellow;
   width:100%;
-  height:6%;
+  height:9%;
   display:flex;
   flex-direction:row;
-  justify-content:space-between;
+  justify-content:center;
+  align-items:center;
   background: linear-gradient(to bottom, var(--banner) 0%, var(--siteBg) 100%);
+}
+
+#buttonsContainer2 {
+  box-sizing: border-box;
+  border: 2px dotted green;
+  width: 38%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

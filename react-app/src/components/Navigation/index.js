@@ -36,11 +36,24 @@ function Navigation({ isLoaded }){
 		</div>
 
 		<div id='buttonsContainer'>
+		<div id='buttonsContainer2'>
 		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
-          Let’s Go
+          About Us
         </GradientButton>
 
-		<GradientComparison />
+		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
+          Previous Work
+        </GradientButton>
+
+		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
+          Owner
+        </GradientButton>
+
+		<GradientButton onClick={() => console.log("Gradient button clicked!")}>
+          Contact Us
+        </GradientButton>
+
+				</div>
 
 		</div>
 
