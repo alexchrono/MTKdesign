@@ -13,10 +13,11 @@ const BusinessIntro = ({setBusinessSelection}) => {
       style={{
         boxSizing: 'border-box',
         border: '3px dotted pink',
-        height: '100dvh',
+        height: '100%',
+        overflowY:'auto'
       }}
     >
-      <header>
+      <header style={{paddingTop:'0px'}}>
         <h1>MTK Design</h1>
         <p>
           Interior Design &amp; Something Else{' '}
