@@ -51,7 +51,7 @@ const BusinessDescriptionPortal = () => {
 
     pointerEvents: 'auto',
   }}
-><div id="wrapper" style={{width:'100%',height:'100%',padding:'0 0 0 0'}}>
+><div id="wrapper" style={{width:'100%'}}>
         {businessSelection==='intro' && (
             <BusinessIntro setBusinessSelection={setBusinessSelection} />
         )}
