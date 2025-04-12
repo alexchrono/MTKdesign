@@ -21,11 +21,15 @@ function Navigation({ isLoaded }){
 				<NavLink to="/">Home</NavLink>
 				</div>
 				<div id='blockSpacer'>
-
-					<div id='centerLogo'>
+          {buttonSelection === 'Previous Work'?
+          (<span id='showHouseNumber'>House 1 of 3</span>)
+        : (
+<div id='centerLogo'>
 					<img src={Logo} alt="MTK Design Logo" id='MTKlogo' />
 
 					</div>
+        )}
+
 
 				</div>
 
@@ -38,7 +42,7 @@ function Navigation({ isLoaded }){
 
 		</div>
 
-		
+
 	);
 }
 
