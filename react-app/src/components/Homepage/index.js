@@ -8,6 +8,7 @@ import React from "react";
 // import './homepage.css'
 // import { showDetails } from './mobileScript';
 import { useAppContext } from "../../context/AppContext";
+import BusinessDescriptionPortal from "../BusinessDescriptionPortal";
 
 function Homepage() {
     const { buttonSelection, setButtonSelection } = useAppContext();
@@ -16,7 +17,7 @@ function Homepage() {
         {buttonSelection==='About Us' && (
  <div id='homeWrapper'>
  {/* Basic structure with a simple heading */}
- <h1>This is the start</h1>
+ <BusinessDescriptionPortal/>
 </div>
         )}
 

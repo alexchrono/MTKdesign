@@ -18,7 +18,7 @@ function Navigation({ isLoaded }){
 		<div id='Navigation'>
 
 			<div id='leftHome'>
-				<NavLink exact to="/">Home</NavLink>
+				<NavLink to="/">Home</NavLink>
 				</div>
 				<div id='blockSpacer'>
 
