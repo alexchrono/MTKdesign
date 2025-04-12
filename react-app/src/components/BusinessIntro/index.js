@@ -21,6 +21,7 @@ const BusinessIntro = ({setBusinessSelection}) => {
       }}
     >
 
+
       <header style={{boxSizing:'border-box',border:'10px dotted black',paddingTop:'0px'}}>
         <h1>MTK Design</h1>
         <p>
