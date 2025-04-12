@@ -14,12 +14,13 @@ const BusinessIntro = ({setBusinessSelection}) => {
         boxSizing: 'border-box',
         border: '3px dotted pink',
         height: '100%',
-        overflowY:'auto',
+        overflowY:'hidden',
         width: '100%',
         maxWidth: '100%',
         gridTemplateColumns: '50% 50%'
       }}
     >
+
       <header style={{boxSizing:'border-box',border:'10px dotted black',paddingTop:'0px'}}>
         <h1>MTK Design</h1>
         <p>
