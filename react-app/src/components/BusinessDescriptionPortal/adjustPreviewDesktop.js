@@ -22,7 +22,7 @@ export function adjustPreviewDesktop(midStaticHolder, menuRightSide) {
             transform: 'scale(0.6)',
             aspectRatio: '4/3',
         };
-        
+
 
         // Full version kept for later use:
         /*
