@@ -194,9 +194,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 :root {
-  --banner: #7469B6;
+  --banner: rgb(49, 54, 63);
   --color2: #AD88C6;
-  --siteBg: #E1AFD1;
+  --siteBg: rgb(118, 171, 174);
   --logoText: #FFE6E6;
 }
 #root {
@@ -278,7 +278,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, var(--banner) 0%, var(--siteBg) 100%);
+  background: linear-gradient(to bottom, var(--banner) 0%, var(--siteBg) 158%);
 }
 #buttonsContainer2 {
   box-sizing: border-box;
