@@ -1,5 +1,5 @@
 import React, { useEffect,useState,useRef } from 'react';
-import '../../assets/css/main.css';
+// import '../../assets/css/main.css';
 import BusinessIntro from '../BusinessIntro';
 import { adjustPreviewDesktop } from './adjustPreviewDesktop';
 import StaticPreviewPage from '../staticPreviewPage';
