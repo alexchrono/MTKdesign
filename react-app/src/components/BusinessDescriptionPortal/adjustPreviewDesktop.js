@@ -17,10 +17,10 @@ export function adjustPreviewDesktop(midStaticHolder, menuRightSide) {
     const getDeviceStyles = () => {
         // Simplified for testing
         return {
-            width: '1024px',
-            height: '768px',
+            width: '1920px',
+            height: '1080px',
             transform: 'scale(0.6)',
-            aspectRatio: '4/3',
+            aspectRatio: '16/9',
         };
 
 
