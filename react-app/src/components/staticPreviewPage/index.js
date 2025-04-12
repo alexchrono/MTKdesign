@@ -1,5 +1,6 @@
 // src/components/StaticPreviewPage.jsx
 import React, { useState, useEffect } from 'react';
+import TemplateIframe from '../TemplateIframe';
 // import './style.css';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 // import reduxScript, { grabBgColor, grabBgImage } from './redux.js';
@@ -21,11 +22,10 @@ import React, { useState, useEffect } from 'react';
 
 
 
-
-
-
 // zOocValue7,
-
+        // <div id="containerReact" style={{ position: isMobilePreview ? 'relative' : 'fixed' }}  >
+        // <div id="containerReact" style={{ position:  'fixed' }}  >
+            // Stylesheet import can be handled in your main file or imported here */}
 
 const StaticPreviewPage = () => {
 
@@ -35,11 +35,9 @@ const StaticPreviewPage = () => {
 
 
     return (
-        // <div id="containerReact" style={{ position: isMobilePreview ? 'relative' : 'fixed' }}  >
-        <div id="containerReact" style={{ position:  'fixed' }}  >
-            {/* Stylesheet import can be handled in your main file or imported here */}
 
-        </div>
+            <TemplateIframe />
+        // </div>
     );
 };
 
