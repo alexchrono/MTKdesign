@@ -111,14 +111,20 @@
     border: 3px solid red;
 }
 
-@keyframes fadeInBackground {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
+.main-container {
+  transition: background-color 1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0); /* start transparent */
 }
+
+.main-container.fade-in {
+  background-color: rgba(0, 0, 0, 0.8); /* fade to black-ish */
+}
+
+.main-container.fade-out {
+  background-color: rgba(0, 0, 0, 0); /* fade out to transparent */
+}
+
+
 
 #midStaticHolder {
   box-sizing: border-box;
@@ -131,7 +137,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation: fadeInBackground 1s ease forwards;
+
 }
 
 #menuRightSide {
