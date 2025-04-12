@@ -40,8 +40,18 @@ const BusinessDescriptionPortal = () => {
   return (
 
 
-<div className="is-preload" id="oldBody" style={{ height: '100%' }}>
-<div id="wrapper" style={{width:'100%',height:'100%',padding:'0 0 0 0'}}>
+<div
+  className="is-preload"
+  id="oldBody"
+  style={{
+    width: '80%',
+    height: '100%',
+    transform: 'scale(0.75)',
+    transformOrigin: 'center',
+
+    pointerEvents: 'auto',
+  }}
+><div id="wrapper" style={{width:'100%',height:'100%',padding:'0 0 0 0'}}>
         {businessSelection==='intro' && (
             <BusinessIntro setBusinessSelection={setBusinessSelection} />
         )}

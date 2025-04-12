@@ -3234,7 +3234,7 @@ input, select, textarea {
 			left: 0;
 			position: absolute;
 			top: 0;
-			width: 50%;
+			width: 50vw;
 			z-index: -1;
 		}
 
