@@ -1,28 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState,useEffect} from 'react';
 
-const BusinessIntro = ({setBusinessSelection}) => {
-  const [someState, setSomeState] = useState(null); // Placeholder state if you need it
-
-  useEffect(() => {
-    // Placeholder effect if you need to run anything on mount
-  }, []);
-
+const BusinessIntro = ({ setBusinessSelection }) => {
   return (
     <section
       className="intro"
       style={{
         boxSizing: 'border-box',
         border: '3px dotted pink',
-        height: '100%',
-        overflowY:'hidden',
-        width: '100%',
-        maxWidth: '100%',
-        gridTemplateColumns: '50% 50%'
+        height: '100dvh',
       }}
     >
-
-
-      <header style={{boxSizing:'border-box',border:'10px dotted black',paddingTop:'0px'}}>
+      <header>
         <h1>MTK Design</h1>
         <p>
           Interior Design &amp; Something Else{' '}
@@ -31,7 +19,13 @@ const BusinessIntro = ({setBusinessSelection}) => {
         </p>
         <ul className="actions">
           <li>
-            <a href="#first" className="arrow scrolly" onClick={()=>{setBusinessSelection('philosophy')}}>
+            <a
+              href="#first"
+              className="arrow scrolly"
+              onClick={() => {
+                setBusinessSelection('philosophy');
+              }}
+            >
               <span className="label">Next</span>
             </a>
           </li>
@@ -47,17 +41,14 @@ const BusinessIntro = ({setBusinessSelection}) => {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '100%',
-          height: '100%',
-          padding: '0 5%'
         }}
       >
         <img
           src="https://i.ibb.co/vMTgwKG/MTKdesign-First-Pic.jpg"
           alt="stock image interior design"
           style={{
-            width: 'auto',
-            height: '100%',
+            width: '100%',
+            height: 'auto',
             objectFit: 'contain',
           }}
         />

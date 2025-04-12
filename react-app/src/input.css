@@ -83,6 +83,42 @@
     background-color: var(--banner);
   }
 
+  .main-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 78%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 3px solid red;
+}
+
+#midStaticHolder {
+  box-sizing: border-box;
+  border:4px solid purple;
+  width: 100%;
+  /* height: 92%; */
+  height: 100%;
+  display: flex
+;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuRightSide {
+  box-sizing: border-box;
+  border: 3px solid red;
+  width: auto;
+  height: auto;
+  transform-origin: center;
+}
+
+
+
+
   #makeCute {
     box-sizing: border-box;
     border:4px dotted red;

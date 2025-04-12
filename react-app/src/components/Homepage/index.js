@@ -13,10 +13,11 @@ import BusinessDescriptionPortal from "../BusinessDescriptionPortal";
 function Homepage() {
     const { buttonSelection, setButtonSelection } = useAppContext();
     return (
-        <div id='makeCute'>
+        <div
+        className="main-container" id='theMainOne'>
         {buttonSelection==='About Us' && (
 
-         
+
  <BusinessDescriptionPortal/>
 
         )}
