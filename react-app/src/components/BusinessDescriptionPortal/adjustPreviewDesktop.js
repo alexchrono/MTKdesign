@@ -9,12 +9,25 @@ export function adjustPreviewDesktop(midStaticHolder, menuRightSide) {
     let newScale;
     let menuRightSideTarget;
 
+    let root = document.getElementById('root');
+
+    // chatGPT now that we have the root what we will do is calculate dynamic view height
+    // and dynamic width. then we will get the pixel value of each. we will also
+    // calculate the aspect ratio of the users device. we could make transform start off
+    // with a scale of 1 always...the rest of the function is good it will recalculate it
+    // we can then set startingStyle equal to NOT getDeviceStyles...but the values
+    // we just found
+
     const getDeviceStyles = () => {
+        const deviceWidth = root.clientWidth;
+        const deviceHeight = root.clientHeight;
+        const aspectRatio = deviceWidth / deviceHeight;
+
         return {
-            width: '1920px',
-            height: '1080px',
-            transform: 'scale(0.6)',
-            aspectRatio: '16/9',
+            width: `${deviceWidth}px`,
+            height: `${deviceHeight}px`,
+            transform: 'scale(1)', // Start off with a scale of 1
+            aspectRatio: aspectRatio.toFixed(2),
         };
     };
 
@@ -79,6 +92,6 @@ export function adjustPreviewDesktop(midStaticHolder, menuRightSide) {
         height: `${startingHeight}px`,
         transform: `scale(${newScale})`,
         transformOrigin: 'center',
-        aspectRatio: `${startingStyles.aspectRatio}`,
+        aspectRatio: startingStyles.aspectRatio,
     };
 }
