@@ -3,12 +3,25 @@ import React, { useEffect,useState,useRef } from 'react';
 import BusinessIntro from '../BusinessIntro';
 import { adjustPreviewDesktop } from './adjustPreviewDesktop';
 import StaticPreviewPage from '../staticPreviewPage';
+import { useAppContext } from "../../context/AppContext";
+
+
+
+
+
+
+
+
+
+
+
 
 const BusinessDescriptionPortal = () => {
     const [businessSelection,setBusinessSelection]=useState('intro');
     const menuRightSideRef = useRef(null);
     const midStaticHolderRef = useRef(null);
     const [finalStyleForDesktopDisplay, setFinalStyleForDesktopDisplay] = useState({});
+    const { buttonSelection, setButtonSelection } = useAppContext();
 
     useEffect(() => {
         const el = document.getElementById('oldBody');
@@ -51,31 +64,6 @@ const BusinessDescriptionPortal = () => {
       }, []);
 
 
-//   useEffect(() => {
-//     const scriptPaths = [
-//       './assets/ScriptsForBusiness/jquery.min.js',
-//       './assets/ScriptsForBusiness/jquery.scrolly.min.js',
-//       './assets/ScriptsForBusiness/browser.min.js',
-//       './assets/ScriptsForBusiness/breakpoints.min.js',
-//       './assets/ScriptsForBusiness/util.js',
-//       './assets/ScriptsForBusiness/main.js',
-//     ];
-
-//     const scripts = scriptPaths.map((src) => {
-//       const script = document.createElement('script');
-//       script.src = src;
-//       script.async = false; // preserve execution order
-//       document.body.appendChild(script);
-//       return script;
-//     });
-
-//     // Cleanup on unmount
-//     return () => {
-//       scripts.forEach((script) => {
-//         document.body.removeChild(script);
-//       });
-//     };
-//   }, []);
 
   return (
 
