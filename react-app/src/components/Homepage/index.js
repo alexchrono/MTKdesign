@@ -15,8 +15,8 @@ function Homepage() {
     return (
         <>
         {buttonSelection==='About Us' && (
- <div id='homeWrapper'>
- {/* Basic structure with a simple heading */}
+            <div id="homeWrapper" style={{ width: '100%' }}>
+            {/* Basic structure with a simple heading */}
  <BusinessDescriptionPortal/>
 </div>
         )}

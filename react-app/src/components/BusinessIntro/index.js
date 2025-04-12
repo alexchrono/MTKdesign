@@ -14,10 +14,13 @@ const BusinessIntro = ({setBusinessSelection}) => {
         boxSizing: 'border-box',
         border: '3px dotted pink',
         height: '100%',
-        overflowY:'auto'
+        overflowY:'auto',
+        width: '100%',
+        maxWidth: '100%',
+        gridTemplateColumns: '50% 50%'
       }}
     >
-      <header style={{paddingTop:'0px'}}>
+      <header style={{boxSizing:'border-box',border:'10px dotted black',paddingTop:'0px'}}>
         <h1>MTK Design</h1>
         <p>
           Interior Design &amp; Something Else{' '}
@@ -42,14 +45,17 @@ const BusinessIntro = ({setBusinessSelection}) => {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
+          width: '100%',
+          height: '100%',
+          padding: '0 5%'
         }}
       >
         <img
           src="https://i.ibb.co/vMTgwKG/MTKdesign-First-Pic.jpg"
           alt="stock image interior design"
           style={{
-            width: '100%',
-            height: 'auto',
+            width: 'auto',
+            height: '100%',
             objectFit: 'contain',
           }}
         />
