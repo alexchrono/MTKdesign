@@ -90,8 +90,10 @@
     height: 78%;
     overflow-y: hidden;
     /* background-color: var(--siteBg); */
-    background: linear-gradient(to bottom, #5b7d83 0%, var(--siteBg) 100%);
-
+    background:
+    linear-gradient(to bottom, #5b7d83 0%, rgb(104 152 154) 30%, #5b7d83 72%, var(--siteBg) 122%),
+    url('./assets/textures/nice-snow.png');
+  background-blend-mode: overlay;
     display:flex;
     flex-direction:column;
 }
