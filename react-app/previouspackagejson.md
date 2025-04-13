@@ -1,6 +1,5 @@
 {
   "name": "react-app",
-  "homepage": "https://alexchrono.github.io/MTKdesign",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,16 +19,14 @@
     "redux-thunk": "^3.1.0",
     "tailwindcss": "^4.1.3"
   },
-"scripts": {
-  "start": "react-scripts start",
-  "build": "CI=false && react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-  "dev": "concurrently \"npm run tailwind\" \"npm start\"",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "CI=false && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "concurrently \"npm run tailwind\" \"npm start\""
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
