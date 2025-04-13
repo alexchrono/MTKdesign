@@ -69,6 +69,8 @@ const PreviousWork = () => {
         afterImages: [kitchen3after, bathroom3after, bedroom3after],
         external: external3
       };
+
+      const houses = [house1, house2, house3];
     return (
         <div id='previousWorkWrapper'>
 
@@ -100,7 +102,7 @@ const PreviousWork = () => {
                         </div>
                         <div className='sixtyPercent'>
 
-                            house {houseCounter} of 3
+                            house {houseCounter} of{houses.length}
                         </div>
                         <div className='twentyPercent'>
                         <img src={chevronRight} className='chevronz'/>
