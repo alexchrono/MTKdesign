@@ -103,29 +103,29 @@ const PreviousWork = () => {
 
                 <div id='listPicsCenter'>
                 <div id='chevronHolder'>
-  <div className='twentyPercent'>
-    <img
-      src={chevronLeft}
-      className='chevronz'
-      onClick={() => {
+  <div className='twentyPercent' onClick={() => {
         setHouseCounter((prev) =>
           prev === 1 ? houses.length : prev - 1
         );
-      }}
+      }}>
+    <img
+      src={chevronLeft}
+      className='chevronz'
+
     />
   </div>
   <div className='sixtyPercent'>
     house {houseCounter} of {houses.length}
   </div>
-  <div className='twentyPercent'>
-    <img
-      src={chevronRight}
-      className='chevronz'
-      onClick={() => {
+  <div className='twentyPercent' onClick={() => {
         setHouseCounter((prev) =>
           prev === houses.length ? 1 : prev + 1
         );
-      }}
+      }}>
+    <img
+      src={chevronRight}
+      className='chevronz'
+
     />
   </div>
 </div>
