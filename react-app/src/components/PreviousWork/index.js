@@ -78,6 +78,7 @@ const PreviousWork = () => {
 
       useEffect(() => {
         setCurrentHouse(houses[houseCounter - 1]);
+        // setRoomSelector(0);
       }, [houseCounter]);
     return (
         <div id='previousWorkWrapper'>
@@ -85,7 +86,10 @@ const PreviousWork = () => {
             <div id='borderPW'>
 
             <div className='listPicsWrapper'>
-  {Array.from({ length: 40 }).map((_, index) => {
+            <div className='justApic'>
+          <img src={currentHouse?.beforeImages[roomSelector]}  />
+        </div>
+  {/* {Array.from({ length: 40 }).map((_, index) => {
     const beforeImage = currentHouse?.beforeImages?.[index];
     return (
       beforeImage && (
@@ -94,7 +98,7 @@ const PreviousWork = () => {
         </div>
       )
     );
-  })}
+  })} */}
 </div>
 
                 <div id='listPicsCenter'>
@@ -133,7 +137,7 @@ const PreviousWork = () => {
 
 
                     <div id='rowAmongstColumns'>
-                        <div className='tinyPicColumn'>
+                        {/* <div className='tinyPicColumn'>
 
                         {currentHouse?.beforeImages.map((ele, idx) => (
   <div className='tinyImagezWrapper' key={idx}>
@@ -142,18 +146,39 @@ const PreviousWork = () => {
   </div>)
 )}
 
-                        </div>
+                        </div> */}
                         <div id='roomIdentifier'>
-
-                        {currentHouse?.descriptors.map((ele, idx) => (
-  <div className='Descriptor' key={idx}>
-    {ele}
-  </div>
-))}
-
-
-                        </div>
-                        <div className='tinyPicColumn'>
+  {currentHouse?.descriptors.map((descriptor, idx) => (
+    <div className={roomSelector===idx?'totalPackageSelected':'totalPackage'} key={idx} onClick={()=>{setRoomSelector(idx)}}>
+      <div className='totalPackageInner' key={`inner${idx}`}>
+      <div className='totalPackageHeader' key={`header${idx}`}>
+      <span className='totalPackageHeaderSpan' key={`headerSpan${idx}`}>
+        {descriptor}
+        </span>
+      </div>
+      <div className='totalPackageImageContainerWrapper' key={`totalPackageImageContainerWrapper${idx}`}>
+      <div className='totalPackageImageContainer' key={`totalPackageImageContainer${idx}`}>
+        <div className='totalPackageImageContainerLeft' key={`totalPackageImageContainerLeft${idx}`}>
+          <img
+            src={currentHouse?.beforeImages?.[idx]}
+            className='tinyImagezBoth'
+            key={`imageBeforePic${idx}`}
+          />
+        </div>
+        <div className='totalPackageImageContainerRight' key={`totalPackageImageContainerRight${idx}`}>
+          <img
+            src={currentHouse?.afterImages?.[idx]}
+            className='tinyImagezBoth'
+            key={`imageAfterPic${idx}`}
+          />
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+  ))}
+</div>
+                        {/* <div className='tinyPicColumn'>
 
                         {currentHouse?.afterImages.map((ele, idx) => (
   <div className='tinyImagezWrapper' key={idx}>
@@ -162,7 +187,7 @@ const PreviousWork = () => {
   </div>)
 )}
 
-                            </div>
+                            </div> */}
 
                     </div>
 
@@ -190,16 +215,9 @@ const PreviousWork = () => {
                 </div>
 
                 <div className='listPicsWrapper'>
-  {Array.from({ length: 40 }).map((_, index) => {
-    const afterImage = currentHouse?.afterImages?.[index];
-    return (
-      afterImage && (
-        <div className='justApic' key={index}>
-          <img src={afterImage} alt={`after ${index}`} />
+                <div className='justApic'>
+          <img src={currentHouse?.afterImages[roomSelector]}  />
         </div>
-      )
-    );
-  })}
 </div>
 
             </div>

@@ -482,11 +482,74 @@
 #roomIdentifier {
   box-sizing: border-box;
   border: 2px dotted yellow;
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
+}
+.totalPackageHeader {
+  box-sizing: border-box;
+  border: 2px dotted green;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  height: 20%;
+}
+.totalPackageHeaderSpan {
+  width: 30%;
+  height: 80%;
+  font-size: 1.6dvh;
+  background-color: purple;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+.totalPackageImageContainerWrapper {
+  box-sizing: border-box;
+  border: 2px dotted silver;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.totalPackageImageContainer {
+  box-sizing: border-box;
+  border: 2px dotted blue;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+.totalPackageImageContainerLeft {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.totalPackageImageContainerRight {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tinyImagezBoth {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .Descriptor {
   box-sizing: border-box;
@@ -513,6 +576,35 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.totalPackage {
+  box-sizing: border-box;
+  border: 3px dotted silver;
+  width: 100%;
+  height: 33.33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+.totalPackageSelected {
+  box-sizing: border-box;
+  border: 3px dotted silver;
+  width: 100%;
+  height: 33.33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+}
+.totalPackageInner {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  background-color: aqua;
 }
 #midStaticHolder {
   box-sizing: border-box;
