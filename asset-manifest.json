@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MTKdesign/static/css/main.dc61a7c6.css",
-    "main.js": "/MTKdesign/static/js/main.9d1f6671.js",
+    "main.js": "/MTKdesign/static/js/main.eeab5948.js",
     "static/media/kitchen2after.jpg": "/MTKdesign/static/media/kitchen2after.c532dd8d85c37442e70f.jpg",
     "static/media/kitchen2before.jpg": "/MTKdesign/static/media/kitchen2before.2bebd379d21e81f03ed8.jpg",
     "static/media/kitchen1after.jpg": "/MTKdesign/static/media/kitchen1after.313777a66455808545e2.jpg",
@@ -30,10 +30,10 @@
     "static/media/chevron-right-fa.svg": "/MTKdesign/static/media/chevron-right-fa.714c54c57db5cfbc94b9f31a005df5f3.svg",
     "static/media/chevron-left-fa.svg": "/MTKdesign/static/media/chevron-left-fa.e9c55914eab4e366ef90e3090bb02c69.svg",
     "main.dc61a7c6.css.map": "/MTKdesign/static/css/main.dc61a7c6.css.map",
-    "main.9d1f6671.js.map": "/MTKdesign/static/js/main.9d1f6671.js.map"
+    "main.eeab5948.js.map": "/MTKdesign/static/js/main.eeab5948.js.map"
   },
   "entrypoints": [
     "static/css/main.dc61a7c6.css",
-    "static/js/main.9d1f6671.js"
+    "static/js/main.eeab5948.js"
   ]
 }
