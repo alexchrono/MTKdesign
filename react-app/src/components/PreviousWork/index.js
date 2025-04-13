@@ -71,46 +71,63 @@ const PreviousWork = () => {
       };
 
       const houses = [house1, house2, house3];
+
+      const [currentHouse,setCurrentHouse]=useState(houses[(houseCounter-1)])
+
+
+
+      useEffect(() => {
+        setCurrentHouse(houses[houseCounter - 1]);
+      }, [houseCounter]);
     return (
         <div id='previousWorkWrapper'>
 
             <div id='borderPW'>
 
-                <div className='listPicsWrapper'>
-                    <div className='justApic'>
-                        <img src={beforeBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={beforeBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={beforeBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={beforeBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={beforeBathroom} />
-                    </div>
-
-                </div>
+            <div className='listPicsWrapper'>
+  {Array.from({ length: 40 }).map((_, index) => {
+    const beforeImage = currentHouse?.beforeImages?.[index];
+    return (
+      beforeImage && (
+        <div className='justApic' key={index}>
+          <img src={beforeImage} alt={`Before ${index}`} />
+        </div>
+      )
+    );
+  })}
+</div>
 
                 <div id='listPicsCenter'>
                 <div id='chevronHolder'>
-                        <div className='twentyPercent'>
-                        <img src={chevronLeft} className='chevronz'/>
-                        </div>
-                        <div className='sixtyPercent'>
+  <div className='twentyPercent'>
+    <img
+      src={chevronLeft}
+      className='chevronz'
+      onClick={() => {
+        setHouseCounter((prev) =>
+          prev === 1 ? houses.length : prev - 1
+        );
+      }}
+    />
+  </div>
+  <div className='sixtyPercent'>
+    house {houseCounter} of {houses.length}
+  </div>
+  <div className='twentyPercent'>
+    <img
+      src={chevronRight}
+      className='chevronz'
+      onClick={() => {
+        setHouseCounter((prev) =>
+          prev === houses.length ? 1 : prev + 1
+        );
+      }}
+    />
+  </div>
+</div>
 
-                            house {houseCounter} of{houses.length}
-                        </div>
-                        <div className='twentyPercent'>
-                        <img src={chevronRight} className='chevronz'/>
-                        </div>
-
-                    </div>
                     <div id='housePreview'>
-                    <img src={houseImage1} alt="Stock House" id='good4Adam' />
+                    <img src={currentHouse.external} alt="Stock House" id='good4Adam' />
 
                     </div>
 
@@ -118,11 +135,32 @@ const PreviousWork = () => {
                     <div id='rowAmongstColumns'>
                         <div className='tinyPicColumn'>
 
+                        {currentHouse?.beforeImages.map((ele, idx) => (
+  <div className='tinyImagezWrapper' key={idx}>
+    <img className='tinyImagez' src={ele}/>
+
+  </div>)
+)}
+
                         </div>
                         <div id='roomIdentifier'>
 
+                        {currentHouse?.descriptors.map((ele, idx) => (
+  <div className='Descriptor' key={idx}>
+    {ele}
+  </div>
+))}
+
+
                         </div>
                         <div className='tinyPicColumn'>
+
+                        {currentHouse?.afterImages.map((ele, idx) => (
+  <div className='tinyImagezWrapper' key={idx}>
+    <img className='tinyImagez' src={ele}/>
+
+  </div>)
+)}
 
                             </div>
 
@@ -152,23 +190,17 @@ const PreviousWork = () => {
                 </div>
 
                 <div className='listPicsWrapper'>
-                <div className='justApic'>
-                        <img src={afterBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={afterBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={afterBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={afterBathroom} />
-                    </div>
-                    <div className='justApic'>
-                        <img src={afterBathroom} />
-                    </div>
-
-                </div>
+  {Array.from({ length: 40 }).map((_, index) => {
+    const afterImage = currentHouse?.afterImages?.[index];
+    return (
+      afterImage && (
+        <div className='justApic' key={index}>
+          <img src={afterImage} alt={`after ${index}`} />
+        </div>
+      )
+    );
+  })}
+</div>
 
             </div>
 
