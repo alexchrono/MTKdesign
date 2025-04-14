@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/MTKdesign/static/css/main.dc61a7c6.css",
+    "main.js": "/MTKdesign/static/js/main.c3c891bd.js",
+    "static/media/kitchen2after.jpg": "/MTKdesign/static/media/kitchen2after.c532dd8d85c37442e70f.jpg",
+    "static/media/kitchen2before.jpg": "/MTKdesign/static/media/kitchen2before.2bebd379d21e81f03ed8.jpg",
+    "static/media/kitchen1after.jpg": "/MTKdesign/static/media/kitchen1after.313777a66455808545e2.jpg",
+    "static/media/kitchen3after.jpg": "/MTKdesign/static/media/kitchen3after.b4753ca977fa55db8991.jpg",
+    "static/media/bathroom2after.jpg": "/MTKdesign/static/media/bathroom2after.846877cd5444d64b416a.jpg",
+    "static/media/bathroom2before.jpg": "/MTKdesign/static/media/bathroom2before.33aefe10eb8fddd6f053.jpg",
+    "static/media/bathroom3before.jpg": "/MTKdesign/static/media/bathroom3before.b051019af6ce1fee9f71.jpg",
+    "static/media/kitchen3before.jpg": "/MTKdesign/static/media/kitchen3before.d1f1cac851dfee2a1afc.jpg",
+    "static/media/kitchen1before.jpg": "/MTKdesign/static/media/kitchen1before.9e79a915185106a124e8.jpg",
+    "static/media/bathroom3after.jpg": "/MTKdesign/static/media/bathroom3after.1a12dd7f5b68fe83321d.jpg",
+    "static/media/bathroom1before.jpg": "/MTKdesign/static/media/bathroom1before.f2f2799c0cd549dc1d5d.jpg",
+    "static/media/bathroom1after.jpg": "/MTKdesign/static/media/bathroom1after.4cc50deaf4a810e556f6.jpg",
+    "static/media/external3.jpg": "/MTKdesign/static/media/external3.547603b037537973ef87.jpg",
+    "static/media/bedroom1after.jpg": "/MTKdesign/static/media/bedroom1after.57a72b733cebfb8277a7.jpg",
+    "static/media/external1.jpg": "/MTKdesign/static/media/external1.94c71df7827521be6c01.jpg",
+    "static/media/stockHouseWide.jpg": "/MTKdesign/static/media/stockHouseWide.94c71df7827521be6c01.jpg",
+    "static/media/MTKdesignPaletteSilver.png": "/MTKdesign/static/media/MTKdesignPaletteSilver.8035ca11521b3e7291e2.png",
+    "static/media/bedroom1before.jpg": "/MTKdesign/static/media/bedroom1before.f695e6e61d1fa4039781.jpg",
+    "static/media/external2.jpg": "/MTKdesign/static/media/external2.31137bc947900435f94a.jpg",
+    "static/media/bedroom2after.jpg": "/MTKdesign/static/media/bedroom2after.a239bed5ca2f18ad612c.jpg",
+    "static/media/bedroom3before.jpg": "/MTKdesign/static/media/bedroom3before.aa5713dd69f82c51b724.jpg",
+    "static/media/bedroom2before.jpg": "/MTKdesign/static/media/bedroom2before.3f502f4d39fedbcc5df1.jpg",
+    "static/media/bedroom3after.jpg": "/MTKdesign/static/media/bedroom3after.110d3213d9270ad77e16.jpg",
+    "static/media/nice-snow.png": "/MTKdesign/static/media/nice-snow.0678c7cc080951c6f40d.png",
+    "index.html": "/MTKdesign/index.html",
+    "static/media/chevron-right-fa.svg": "/MTKdesign/static/media/chevron-right-fa.714c54c57db5cfbc94b9f31a005df5f3.svg",
+    "static/media/chevron-left-fa.svg": "/MTKdesign/static/media/chevron-left-fa.e9c55914eab4e366ef90e3090bb02c69.svg",
+    "main.dc61a7c6.css.map": "/MTKdesign/static/css/main.dc61a7c6.css.map",
+    "main.c3c891bd.js.map": "/MTKdesign/static/js/main.c3c891bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc61a7c6.css",
+    "static/js/main.c3c891bd.js"
+  ]
+}

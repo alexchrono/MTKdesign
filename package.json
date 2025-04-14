@@ -27,7 +27,7 @@
   "eject": "react-scripts eject",
   "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
   "dev": "concurrently \"npm run tailwind\" \"npm start\"",
-"showPreview": "rm -rf ./build && npm run build && git add . && git commit -m 'Deploy from current branch' && git push origin $(git symbolic-ref --short HEAD)"
+"showPreview": "rm -rf ./index.html ./static ./favicon.ico ./asset-manifest.json ./manifest.json && npm run build && cp -r build/* ./ && rm -rf build && git add . && git commit -m 'Deploy from current branch' && git push origin $(git symbolic-ref --short HEAD)"
 },
   "eslintConfig": {
     "extends": "react-app"
