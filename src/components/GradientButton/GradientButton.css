@@ -1,0 +1,75 @@
+/* From Uiverse.io by cssbuttons-io */
+.uiverse-gradient-button {
+    all: unset; /* nukes all Tailwind, reset madness */
+    align-items: center;
+    justify-content:center;
+
+    /* background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb); */
+    /*pretty i like it */
+    /* background-image: linear-gradient(144deg, #8c1c13, #9d2aa8 50%, #177e89); */
+    background-image: linear-gradient(144deg, #8c1c13, #9d2aa8 50%, #177e89);
+
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 1.6dvh;
+    justify-content: center;
+    line-height: 1em;
+    /* max-width: 20%;
+    min-width:20%; */
+    width:24%;
+    /* MAYBE ONLY FOR DESKTOP BELOW */
+    /* min-width: 140px; */
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.uiverse-gradient-button:active,
+.uiverse-gradient-button:hover {
+    outline: 0;
+}
+
+/* Inner button styling */
+.uiverse-button-inner {
+    background-color: rgb(5, 6, 45);
+    padding: 1em 1.5em; /* padding based on font size instead of pixels */
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.uiverse-gradient-button:hover .uiverse-button-inner {
+    background: none;
+}
+
+.uiverse-gradient-button:active {
+    /* background-image: linear-gradient(144deg, #8c1c13, #9d2aa8 50%, #177e89); */
+    background-image: linear-gradient(144deg, rgb(140, 28, 19), rgb(128, 51, 88) 8%, rgb(137, 56, 153) 35%, rgb(94, 62, 136) 44%, rgb(106, 61, 167) 55%, rgb(58, 140, 159) 66%, rgb(23, 126, 137) 86%);
+    transform: scale(0.9);
+}
+
+.uiverse-gradient-button--selected {
+    /* background-image: linear-gradient(144deg, #8c1c13, #9d2aa8 50%, #177e89); */
+    background-image: linear-gradient(144deg, rgb(140, 28, 19), rgb(128, 51, 88) 8%, rgb(137, 56, 153) 35%, rgb(94, 62, 136) 44%, rgb(106, 61, 167) 55%, rgb(58, 140, 159) 66%, rgb(23, 126, 137) 86%);
+    /* transform: scale(0.9); */
+}
+
+.uiverse-gradient-button--selected .uiverse-button-inner {
+    background: none;
+}

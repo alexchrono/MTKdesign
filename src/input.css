@@ -1,0 +1,520 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+:root {
+
+  --banner: rgb(49, 54, 63);
+  --color2: #AD88C6;
+  --siteBg: rgb(118, 171, 174);
+  --logoText: #FFE6E6;
+}
+
+#root {
+    height: 100dvh;
+    width: 100dvw;
+    overflow-y: hidden;
+
+  }
+
+  #MTKlogo {
+
+    height:79%;
+    width:auto;
+    object-fit:contain;
+  }
+
+  .courgette-regular {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #onlyVisibleMobile {
+    display: none;
+  }
+  .profile-dropdown {
+    position: absolute;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #leftHome {
+    box-sizing: border-box;
+    border:2px dotted black;
+    width:8%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #blockSpacer {
+    box-sizing: border-box;
+    border:3px solid green;
+    width: 92%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    padding-right:8%;
+  }
+
+  #centerLogo {
+    box-sizing: border-box;
+    /* border:3px solid red; */
+    width: 17%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:4dvh;
+    color:var(--logoText);
+  }
+
+  #Navigation {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--banner);
+  }
+
+  #containerReact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgColor);
+    background-image: var(--backgroundImage);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+  .main-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 91%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 3px solid red;
+}
+
+.main-container {
+  transition: background-color 1s ease-in-out;
+  background-color: rgba(0, 0, 0, 0); /* start transparent */
+}
+
+.main-container.fade-in {
+  background-color: rgba(0, 0, 0, 0.6); /* fade to black-ish */
+}
+
+.main-container.fade-out {
+  background-color: rgba(0, 0, 0, 0); /* fade out to transparent */
+}
+
+#previousWorkWrapper {
+  box-sizing: border-box;
+  border:5px solid saddlebrown;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+}
+
+#borderPW {
+  box-sizing: border-box;
+  border: 4px solid green;
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  /* background-color: #545e8d; */
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+#showHouseNumber {
+  box-sizing: border-box;
+  border:3px solid yellow;
+  width: 35%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:4dvh;
+  color: white;
+}
+
+#chevronHolder {
+  box-sizing: border-box;
+  border:3px solid red;
+  width:100%;
+  height:6%;
+  display:flex;
+  flex-direction:row;
+}
+
+.chevronz {
+  height:100%;
+  width: auto;
+  object-fit:contain;
+}
+
+/* For .listPicsWrapper */
+.listPicsWrapper {
+  box-sizing: border-box;
+  border: 5px dotted black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  background-color: rgba(84, 94, 141, .5)
+}
+
+.justApic {
+  box-sizing: border-box;
+  border:3px solid gray;
+  width: 100%;
+  height:100%;
+  min-height: 100%;
+
+}
+
+#rowAmongstColumns {
+  box-sizing: border-box;
+  border:4px dotted black;
+  width:100%;
+  height:64%;
+  display:flex;
+  flex-direction:row;
+}
+
+.justApic img {
+  height:100%;
+  width:100%;
+  object-fit:contain;
+}
+
+
+
+#good4Adam {
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+/* For .listPicsCenter */
+#listPicsCenter {
+  box-sizing: border-box;
+  border: 5px dotted yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21%;
+  height: 100%;
+}
+
+#housePreview {
+  box-sizing: border-box;
+  border:2px dotted purple;
+  width:100%;
+  height:30%;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+  padding:8%;
+}
+
+.twentyPercent {
+  box-sizing: border-box;
+  border:2px solid white;
+  width: 20%;
+  height: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.sixtyPercent {
+  box-sizing: border-box;
+  border:3px solid orange;
+  width:60%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:2dvh;
+}
+
+.tinyPicColumn {
+  box-sizing: border-box;
+  border:2px dotted pink;
+  width:35%;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  overflow-y:auto;
+}
+
+#roomIdentifier {
+  box-sizing: border-box;
+  border:2px dotted yellow;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  overflow-y:auto;
+}
+
+.totalPackageHeader {
+  box-sizing: border-box;
+  border:2px dotted green;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+
+  font-weight:bolder;
+  height:20%;
+
+}
+
+.totalPackageHeaderSpan{
+  width:30%;
+  height:80%;
+  font-size:1.6dvh;
+  background-color: purple;
+  color:white;
+  font-weight:bolder;
+  text-align: center;
+
+}
+
+
+.totalPackageImageContainerWrapper {
+  box-sizing: border-box;
+  border:2px dotted silver;
+  width:100%;
+  height:80%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalPackageImageContainer{
+  box-sizing: border-box;
+  border:2px dotted blue;
+  width:90%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  height:90%;
+
+}
+
+.totalPackageImageContainerLeft{
+  box-sizing: border-box;
+
+  width:50%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+
+}
+
+.totalPackageImageContainerRight{
+  box-sizing: border-box;
+
+  width:50%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+
+}
+
+.tinyImagezBoth {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.Descriptor {
+  box-sizing: border-box;
+  border:3px solid orange;
+  width:100%;
+  height:23%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size:1.9dvh;
+}
+
+.tinyImagezWrapper {
+  box-sizing: border-box;
+  border:3px solid red;
+  width:100%;
+  height:23%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tinyImagez {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.totalPackage {
+  box-sizing: border-box;
+  border:3px dotted silver;
+  width:100%;
+  height:33.33%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.totalPackageSelected {
+  box-sizing: border-box;
+  border:3px dotted silver;
+  width:100%;
+  height:33.33%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+}
+
+.totalPackageInner {
+  display:flex;
+  flex-direction:column;
+  width:90%;
+  height:90%;
+  background-color: aqua;
+}
+
+
+
+
+#midStaticHolder {
+  box-sizing: border-box;
+  border:4px solid purple;
+  width: 100%;
+  /* height: 92%; */
+  height: 100%;
+  display: flex
+;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#menuRightSide {
+  box-sizing: border-box;
+  border: 3px solid red;
+  width: auto;
+  height: auto;
+  transform-origin: center;
+}
+
+
+
+
+  #makeCute {
+    box-sizing: border-box;
+    border:4px dotted red;
+    width:100%;
+    height:78%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+  }
+  #makeCuteCenter {
+    box-sizing: border-box;
+    border: 4px dotted brown;
+    width: 63%;
+    height: 85%;
+    display: flex
+;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  #homeWrapper {
+    box-sizing: border-box;
+    border: 4px solid blue;
+    width: 100%;
+    height: 78%;
+    overflow-y: hidden;
+    /* background-color: var(--siteBg); */
+    background:
+    linear-gradient(to bottom, #5b7d83 0%, rgb(104 152 154) 30%, #5b7d83 72%, var(--siteBg) 122%),
+    url('./assets/textures/nice-snow.png');
+  background-blend-mode: overlay;
+    display:flex;
+    flex-direction:column;
+}
+
+#buttonsContainer {
+  box-sizing: border-box;
+  border:2px dotted yellow;
+  width:100%;
+  height:9%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(to bottom, var(--banner) 0%, #5b7d83 100%);
+}
+
+#buttonsContainer2 {
+  box-sizing: border-box;
+  border: 2px dotted green;
+  width: 30%;
+  height: 80%;
+  display: flex
+;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (orientation: portrait), screen and (max-aspect-ratio: 1/1) {
+  #buttonsContainer2 {
+    width:100%;
+  }
+}
