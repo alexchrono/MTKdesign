@@ -2,10 +2,10 @@ import React from 'react';
 
 const TemplateIframe = () => {
   return (
-    
+
       <iframe
-        src="/template-index.html"
-        width="100%"
+      src={`${process.env.PUBLIC_URL}/template-index.html`}
+      width="100%"
         height="100%"
         style={{ border: 'none',position:'fixed' }}
         title="Template"
