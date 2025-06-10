@@ -2861,6 +2861,10 @@ input, select, textarea {
 			width: 3rem;
 		}
 
+		a.arrow.previous:before {
+  transform: rotate(-180deg);
+}
+
 /* Gallery */
 
 	@-moz-keyframes gallery-modal-spinner {
