@@ -10,6 +10,7 @@ import React, {useState,useEffect} from "react";
 import { useAppContext } from "../../context/AppContext";
 import BusinessDescriptionPortal from "../BusinessDescriptionPortal";
 import PreviousWork from "../PreviousWork";
+import PreviousWork2 from "../PreviousWork2";
 
 function Homepage() {
     const { buttonSelection, setButtonSelection } = useAppContext();
@@ -34,7 +35,7 @@ function Homepage() {
     return (
         <div className={`main-container ${fadeClass}`} id='theMainOne'>
         {shouldShowPortal && <BusinessDescriptionPortal />}
-        {buttonSelection === 'Previous Work' && <PreviousWork />}
+        {buttonSelection === 'Previous Work' && <PreviousWork2 />}
       </div>
 
     );
