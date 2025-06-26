@@ -5,30 +5,13 @@ import { useAppContext } from "../../context/AppContext";
 import houseImage1 from '../../assets/stockHouseWide.jpg';
 import chevronRight from '../../assets/icons/chevron-right-fa.svg'
 import chevronLeft from '../../assets/icons/chevron-left-fa.svg'
-import external1 from '../../assets/house1/external1.jpg';
-import external2 from '../../assets/house2/external2.jpg';
-import external3 from '../../assets/house3/external3.jpg';
-import bathroom1before from '../../assets/house1/bathroom1before.jpg';
-import bathroom2before from '../../assets/house2/bathroom2before.jpg';
-import bathroom3before from '../../assets/house3/bathroom3before.jpg';
-import bathroom1after from '../../assets/house1/bathroom1after.jpg';
-import bathroom2after from '../../assets/house2/bathroom2after.jpg';
-import bathroom3after from '../../assets/house3/bathroom3after.jpg';
-// Bedroom images
-import bedroom1before from '../../assets/house1/bedroom1before.jpg';
-import bedroom2before from '../../assets/house2/bedroom2before.jpg';
-import bedroom3before from '../../assets/house3/bedroom3before.jpg';
-import bedroom1after from '../../assets/house1/bedroom1after.jpg';
-import bedroom2after from '../../assets/house2/bedroom2after.jpg';
-import bedroom3after from '../../assets/house3/bedroom3after.jpg';
+import external1 from '../../assets/AdamProp1/exterior3C.jpg'
+import external2 from '../../assets/AdamProp2/exterior1.jpg'
+import external3 from '../../assets/AdamProp3/exterior3.webp'
 
-// Kitchen images
-import kitchen1before from '../../assets/house1/kitchen1before.jpg';
-import kitchen2before from '../../assets/house2/kitchen2before.jpg';
-import kitchen3before from '../../assets/house3/kitchen3before.jpg';
-import kitchen1after from '../../assets/house1/kitchen1after.jpg';
-import kitchen2after from '../../assets/house2/kitchen2after.jpg';
-import kitchen3after from '../../assets/house3/kitchen3after.jpg';
+
+
+
 
 
 
@@ -88,26 +71,54 @@ const PreviousWork2 = () => {
         <div id='previousWorkWrapper2'>
 
             {!currentHouse && (
+                <>
+                <div id='warningSign'>
+                    Select a property to continue
+
+                </div>
                 <div id='maybe20'>
                     <div id='letsCutDown'>
 
-<div className='lcdPic'>
+<div className='lcdPic' onClick={()=>{setHouseCounter(2)}}>
+    <div className='lcdPicInner'>
+    <img src={external1}></img>
+    </div>
+    <div className='lcdPicInnerText'>
+        {house1}
+
+        </div>
+
+
 
     </div>
-    <div className='lcdPic'>
+    <div className='lcdPic' onClick={()=>{setHouseCounter(3)}}>
+        <div className='lcdPicInner'>
+        <img src={external2}></img>
+        </div>
+        <div className='lcdPicInnerText'>
+        {house2}
+
+        </div>
 
     </div>
-    <div className='lcdPic'>
+    <div className='lcdPic' onClick={()=>{setHouseCounter(4)}}>
+        <div className='lcdPicInner'>
+        <img src={external3}></img>
+        </div>
+        <div className='lcdPicInnerText'>
+        {house3}
+
+        </div>
 
     </div>
                         </div>
 
                 </div>
-            )}
+           </> )}
 
-            <div id='maybe80'>
+            {/* <div id='maybe80'>
                 <h1>We getting somewhere</h1>
-                </div>
+                </div> */}
 
 
 
