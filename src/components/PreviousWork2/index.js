@@ -229,7 +229,11 @@ const PreviousWork2 = () => {
           </div>
         </>
       )}
-
+{Object.keys(houseImageData[houseCounter]?.livingRoom || {}).length > 0 && (
+  <div className='houseRoomLabel'>
+    <div className='houseRoomLabelInner'>Living Rooms </div>
+  </div>
+)}
       {houseImageData[houseCounter]?.livingRoom
   ? Object.entries(houseImageData[houseCounter].livingRoom).reduce((acc, curr, index, arr) => {
       if (isMobileImp) {
