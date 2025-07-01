@@ -34,7 +34,7 @@ import external3 from '../../assets/AdamProp3/exterior3.webp';
 //   _1livingroom3: require('../../assets/AdamProp1/livingroom3.jpg'),
 // };
 
-
+const isMobileImp=false;
 const House1 = {
   bathRoom: {
   _1bathroom1: require('../../assets/AdamProp1/bathroom1.jpg'),
@@ -230,20 +230,27 @@ const PreviousWork2 = () => {
         </>
       )}
 
-      {currentHouse && (
-        <div id="houseImagesDisplay">
-          {/* <h2>{currentHouse}</h2> */}
-          <div className="houseImagesGrid">
-            <div className='houseRoomLabel'>  <div className='houseRoomLabelInner'>Living Rooms </div></div>
-            {Object.entries(houseImageData[houseCounter].livingRoom).map(([key, img], index) => (
-  <div className='imgHolder' key={`holder-${index}`}>
-    <img src={img} alt={key} />
-  </div>
-))}
-
+      {houseImageData[houseCounter]?.livingRoom
+  ? Object.entries(houseImageData[houseCounter].livingRoom).reduce((acc, curr, index, arr) => {
+      if (isMobileImp) {
+        acc.push([curr]);
+      } else if (index % 2 === 0) {
+        const pair = [curr, arr[index + 1]].filter(Boolean);
+        acc.push(pair);
+      }
+      return acc;
+    }, []).map((group, i) => (
+      <div className='outerImgWrapper' key={`wrapper-${i}`}>
+        {group.map(([key, img], j) => (
+          <div className='imgHolder' key={`holder-${i}-${j}`}>
+            <img src={img} alt={key} />
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    ))
+  : null}
+
+
     </div>
   );
 };
